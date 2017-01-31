@@ -11,12 +11,12 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " utilities
-Plugin 'kien/ctrlp.vim'			" fuzzy find files
-Plugin 'scrooloose/nerdtree'	" file drawer, open with :NERDTreeToggle
-Plugin 'tpope/vim-fugitive'		" the ultimate git helper
-Plugin 'tpope/vim-commentary'	" comment/uncomment lines with gcc or gc in visual mode
-Plugin 'bling/vim-airline'		" airline
-Plugin 'tpope/vim-sorround'		" easy srround
+Plugin 'kien/ctrlp.vim'         " fuzzy find files
+Plugin 'scrooloose/nerdtree'    " file drawer, open with :NERDTreeToggle
+Plugin 'tpope/vim-fugitive'     " the ultimate git helper
+Plugin 'tpope/vim-commentary'   " comment/uncomment lines with gcc or gc in visual mode
+Plugin 'bling/vim-airline'      " airline
+Plugin 'tpope/vim-sorround'     " easy srround
 
 " colorschemes
 Plugin 'chriskempson/base16-vim'
@@ -28,8 +28,8 @@ filetype plugin indent on
 set shell=/bin/bash
 
 
-set nocompatible 	" not compatible with vi
-set autoread		" detect when a file is changed
+set nocompatible    " not compatible with vi
+set autoread        " detect when a file is changed
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
@@ -38,12 +38,12 @@ set backspace=indent,eol,start
 let mapleader = ','
 
 " Tab control
-set noexpandtab 	" tabs ftw
-set smarttab 		" tab respects 'tabstop', 'shiftwidth' and 'softtabstop'
-set tabstop=4		" visible width of tab
-set softtabstop=4	" edit as if the tabs are 4 spaces
-set shiftwidth=4	" number of spaces used for indent and unindent
-set shiftround		" round indent to a multiple of shiftwidth
+set noexpandtab     " tabs ftw
+set smarttab        " tab respects 'tabstop', 'shiftwidth' and 'softtabstop'
+set tabstop=4       " visible width of tab
+set softtabstop=4   " edit as if the tabs are 4 spaces
+set shiftwidth=4    " number of spaces used for indent and unindent
+set shiftround      " round indent to a multiple of shiftwidth
 
 set clipboard=unnamed
 
@@ -51,20 +51,20 @@ set clipboard=unnamed
 set ttyfast
 
 " code folding settings
-set foldmethod=syntax 	" fold based on indent
-set foldnestmax=10		" deepest fold is 10 levels
-set nofoldenable		" don't fold by default
+set foldmethod=syntax   " fold based on indent
+set foldnestmax=10      " deepest fold is 10 levels
+set nofoldenable        " don't fold by default
 set foldlevel=1
 
 " enable relative number
 set rnu
 
 function! NumberToggle()
-	if (&relativenumber == 1)
-		set number
-	else
-		set rnu
-	endif
+    if (&relativenumber == 1)
+        set number
+    else
+        set rnu
+    endif
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
@@ -75,15 +75,15 @@ nnoremap <C-n> :call NumberToggle()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Searching
-set ignorecase		" case insensitive	searching
-set smartcase		" case sensitive if expression contains capital letters
-set hlsearch		" highlight search
-set incsearch		" set incremental search
-set nolazyredraw	" don't redraw while executing macros
-set nowrap			" nowrap
-set magic			" set magic on, for regex
-set showmatch		" show matching braces
-set mat=2			" how many tenths of a second to blink
+set ignorecase      " case insensitive  searching
+set smartcase       " case sensitive if expression contains capital letters
+set hlsearch        " highlight search
+set incsearch       " set incremental search
+set nolazyredraw    " don't redraw while executing macros
+set nowrap          " nowrap
+set magic           " set magic on, for regex
+set showmatch       " show matching braces
+set mat=2           " how many tenths of a second to blink
 
 " Switch syntax highlighting on
 syntax on
@@ -94,22 +94,22 @@ set encoding=utf8
 set background=dark
 colorscheme desert
 set ruler
-set autoindent 		" automatically set indent of new line
+set autoindent      " automatically set indent of new line
 set smartindent
-set laststatus=2	" show the status line always
+set laststatus=2    " show the status line always
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"set <leader>ev	:e! ~/.vimrc<cr> " edit ~/.vimrc
+"set <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
 
 " moving up and down work as you would expect
-nnoremap <silent>	j gj
-nnoremap <silent>	k gk
+nnoremap <silent>   j gj
+nnoremap <silent>   k gk
 
 " helpers for dealing with other people's code
-nmap \t	:set ts=4 sts=4 sw=4 noet<cr>
+nmap \t :set ts=4 sts=4 sw=4 noet<cr>
 nmap \s :set ts=4 sts=4 sw=4 et<cr>
 
 
@@ -126,16 +126,16 @@ map <C-l> :call WinMove('l')<cr>
 " move to the window in the direction shown, or create a new window
 "
 function! WinMove(key)
-	let t:curwin = winnr()
-	exec "wincmd ".a:key
-	if (t:curwin == winnr())
-		if (match(a:key, '[jk]'))
-			wincmd v
-		else
-			wincmd s
-		endif
-		exec "wincmd ".a:key
-	endif
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+        if (match(a:key, '[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd ".a:key
+    endif
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
