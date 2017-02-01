@@ -12,7 +12,7 @@ ulimit -S -c 0			# Don't want any coredumps
 set -o notify			# Notify when background job finishes
 set -o noclobber		# Prevent accidental overwrites
 set -o ignoreeof		# Avoid exit via <Ctrl-d>
-set -o nounset			# Check for unused variables
+#set -o nounset			# Check for unused variables (Disabled for bash-completion)
 
 # Enable options:
 shopt -s cdspell
@@ -221,6 +221,10 @@ source /usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='[\u@\H \w$(__git_ps1)]\n->'
 source ~/.git-prompt.sh
+
+if [ -f ./homebrew/Library/Contributions/brew_bash_completion.sh ]; then
+	source ./homebrew/Library/Contributions/brew_bash_completion.sh
+fi
 
 # Local Variables:
 # mode:shell-script
