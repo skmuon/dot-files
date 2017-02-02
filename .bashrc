@@ -215,7 +215,7 @@ function ask()
     esac
 }
 
-source ~/.bash_aliases
+source ~/.bash_alias
 
 source /usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
