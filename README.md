@@ -20,3 +20,10 @@ Collection of .config files for various applications
  gg  : Go to the top of file
  GG  : Go to bottom of file
  ```
+ ### Text Objects
+ ```
+ w  : Words
+ s  : Sentences
+ p  : Paragraphs
+ t  : tags
+ ```
