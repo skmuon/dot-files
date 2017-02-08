@@ -19,11 +19,24 @@ Collection of .config files for various applications
  L   : Move cursor to the bottom of the window
  gg  : Go to the top of file
  GG  : Go to bottom of file
+ 
  ```
- ### Text Objects
+ 
+
+## Text Objects
+ 
  ```
  w  : Words
  s  : Sentences
  p  : Paragraphs
  t  : tags
  ```
+
+
+## Motions
+```
+a  :  all
+i  :  in
+t  : 'til
+f  :  find forward
+F  :  Find backward
