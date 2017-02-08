@@ -85,7 +85,30 @@ Record a macro
 
 Play a macro
   @{register}
-
-
 ```
 
+## Plugins
+```
+vundle    : Plugin manager
+nerdtree  : File drawer
+ctrlp     : Fuzzy file finder
+fugitive  : git tool
+syntastic : syntax checker/linter
+```
+
+
+## Miscellaneous
+```
+:set      : Set value
+:set(v)?  : Show current value of v
+:buffers  : Show ths buffer list
+:reg      : Show the register entries
+```
+
+# tmux
+
+```
+tmux new-sesson -s {session-name}
+tmux attach {session-name}
+tmux ls {list session-name}
+```
