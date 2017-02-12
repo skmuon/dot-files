@@ -102,6 +102,7 @@ set nowrap          " nowrap
 set magic           " set magic on, for regex
 set showmatch       " show matching braces
 set mat=2           " how many tenths of a second to blink
+set textwidth=78	" maximum line width when writing comments
 
 " no annoying sounds on error
 set noerrorbells

@@ -55,6 +55,7 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source .alias
 
 # User configuration
 
