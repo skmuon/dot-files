@@ -8,8 +8,8 @@ FILES="
 	.bash_profile
 	.tmux.conf
 	.gitconfig
+	.zshrc
 	"
-
 
 for f in $FILES
 do
