@@ -206,3 +206,7 @@ set path+=**
 "set showbreak=↪\
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
+
+" Tags
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
