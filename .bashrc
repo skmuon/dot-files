@@ -216,6 +216,7 @@ function ask()
 }
 
 source ~/.bash_alias
+source ~/.alias
 
 source /usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true

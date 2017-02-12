@@ -9,6 +9,7 @@ FILES="
 	.tmux.conf
 	.gitconfig
 	.zshrc
+	.alias
 	"
 
 for f in $FILES
