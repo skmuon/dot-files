@@ -115,13 +115,11 @@ set autoindent      " automatically set indent of new line
 set smartindent		" enable smart indent
 set laststatus=2    " show the status line always
 set tabstop=4		" expand to four spaces
-set cmdheihgt=2		" height of the command window
+set cmdheight=2		" height of the command window
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
 
 " moving up and down work as you would expect
 nnoremap <silent>   j gj
