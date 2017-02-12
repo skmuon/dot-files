@@ -49,8 +49,11 @@ set tabstop=4       " visible width of tab
 set softtabstop=4   " edit as if the tabs are 4 spaces
 set shiftwidth=4    " number of spaces used for indent and unindent
 set shiftround      " round indent to a multiple of shiftwidth
+set colorcolumn=80	" heighlight 80 coloumn
 
+set cul				" set current line
 set wildmenu		" turn wild menu	
+set tags=./tags		" search for tags in above heirarchy
 
 set clipboard=unnamed
 
@@ -195,3 +198,11 @@ inoremap <BS> <NOP>
 inoremap <Del> <NOP>
 
 set path+=**
+
+
+"set list
+"set list
+"set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:.,extends:⟩,precedes:⟨
+"set showbreak=↪\
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+
