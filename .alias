@@ -1,0 +1,13 @@
+alias w="cd  ~/work"
+alias c="clear"
+alias ..="cd .."
+alias ...="cd ../../.."
+alias bc="bc -l"
+alias h="history"
+alias j="jobs -l"
+alias path="echo -e ${PATH//:/\\n}"
+alias vi=vim
+alias svi="sudo vim"
+alias rm="rm -I"
+alias cp="cp -i"
+alias ln="ln -i"
