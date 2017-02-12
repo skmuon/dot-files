@@ -20,6 +20,7 @@ alias gd="git diff"
 alias gk="gitk --all&"
 alias go="git checkout"
 alias gx="gitx --all"
+alias gpo="git push origin master"
 
 alias got="git "
 alias get="git "
