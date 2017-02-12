@@ -24,3 +24,6 @@ alias gpo="git push origin master"
 
 alias got="git "
 alias get="git "
+
+alias mcs="cscope -q -R -b -i"
+alias mct="ctags -R"
