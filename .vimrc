@@ -1,36 +1,32 @@
+"
 " 
-" Personal vimrc file
+" Karthi - vimrc file (Taken from various sources)
 " 
-" load plugins from vundle
-filetype off
 
+" load plugins from vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
-" let vundle manage vundle
-Plugin 'gmarik/vundle'
-
-" utilities
+" plugins
+Plugin 'gmarik/vundle'			" let vundle manage vundle
 Plugin 'kien/ctrlp.vim'         " fuzzy find files
 Plugin 'scrooloose/nerdtree'    " file drawer, open with :NERDTreeToggle
 Plugin 'tpope/vim-fugitive'     " the ultimate git helper
 Plugin 'tpope/vim-commentary'   " comment/uncomment lines with gcc or gc in visual mode
 Plugin 'bling/vim-airline'      " airline
 Plugin 'tpope/vim-sorround'     " easy srround
-
-" colorschemes
-Plugin 'chriskempson/base16-vim'
+Plugin 'chriskempson/base16-vim'	" colorscheme
 
 call vundle#end()
 
 " Enable file type plugins
+filetype off
 filetype plugin on
 filetype indent on
 
-" set bash
-set shell=/bin/bash
-set nocompatible    " not compatible with vi
-set autoread        " detect when a file is changed
+set shell=/bin/bash				" set bash
+set nocompatible				" not compatible with vi
+set autoread					" detect when a file is changed
 set backspace=indent,eol,start	" make backspace behave in a sane manner
 
 " set a map leader for more key combos
@@ -50,25 +46,37 @@ set softtabstop=4   " edit as if the tabs are 4 spaces
 set shiftwidth=4    " number of spaces used for indent and unindent
 set shiftround      " round indent to a multiple of shiftwidth
 set colorcolumn=80	" heighlight 80 coloumn
-
 set cul				" set current line
 set wildmenu		" turn wild menu	
 set tags=./tags		" search for tags in above heirarchy
-
+set ttyfast			" faster redrawing
 set clipboard=unnamed
 
-" faster redrawing
-set ttyfast
 
 " code folding settings
 set foldmethod=syntax   " fold based on indent
 set foldnestmax=10      " deepest fold is 10 levels
 set nofoldenable        " don't fold by default
-set foldlevel=1
+set foldlevel=1			" fold level
+
+" space open/close folds
+nnoremap <space> za
+
+" movement
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+" highlight last inserted text
+nnoremap gV `[v`]
 
 " enable relative number
 set rnu
 
+" Toggle number display
 function! NumberToggle()
     if (&relativenumber == 1)
         set number
@@ -119,6 +127,7 @@ set smartindent		" enable smart indent
 set laststatus=2    " show the status line always
 set tabstop=4		" expand to four spaces
 set cmdheight=2		" height of the command window
+set showcmd			" show command in bottom
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
@@ -132,6 +141,10 @@ nnoremap <silent>   k gk
 nmap \t :set ts=4 sts=4 sw=4 noet<cr>
 nmap \s :set ts=4 sts=4 sw=4 et<cr>
 
+" edit vimrc/zshrc and load vimrc bindings
+nnoremap <leader>ev : vsp $MYVIMRC<CR>
+nnoremap <leader>ez : vsp ~/.zshrc<CR>
+nnoremap <leader>sv	: source $MYVIMRC<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
