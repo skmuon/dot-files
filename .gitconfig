@@ -13,3 +13,5 @@
 	unstage = reset HEAD --
 	last = log -l HEAD
 	visual = !gitk
+[core]
+	editor = /usr/bin/vim

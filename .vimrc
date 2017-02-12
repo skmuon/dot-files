@@ -22,20 +22,25 @@ Plugin 'tpope/vim-sorround'     " easy srround
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
-filetype plugin indent on
+
+" Enable file type plugins
+filetype plugin on
+filetype indent on
 
 " set bash
 set shell=/bin/bash
-
-
 set nocompatible    " not compatible with vi
 set autoread        " detect when a file is changed
-
-" make backspace behave in a sane manner
-set backspace=indent,eol,start
+set backspace=indent,eol,start	" make backspace behave in a sane manner
 
 " set a map leader for more key combos
 let mapleader = ','
+let g:mapleader = ","
+
+" :W sudo saves the file
+command W w !sudo tee % > /dev/null
+" Fast saving
+nmap <leader>w :w!<cr>
 
 " Tab control
 set noexpandtab     " tabs ftw
@@ -44,6 +49,8 @@ set tabstop=4       " visible width of tab
 set softtabstop=4   " edit as if the tabs are 4 spaces
 set shiftwidth=4    " number of spaces used for indent and unindent
 set shiftround      " round indent to a multiple of shiftwidth
+
+set wildmenu		" turn wild menu	
 
 set clipboard=unnamed
 
@@ -85,24 +92,36 @@ set magic           " set magic on, for regex
 set showmatch       " show matching braces
 set mat=2           " how many tenths of a second to blink
 
+" no annoying sounds on error
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+set foldcolumn=1	" add a bit extra margin to the left
+
 " Switch syntax highlighting on
 syntax on
 
+" History
+set history=1000
 
 
 set encoding=utf8
 set background=dark
-colorscheme desert
-set ruler
+colorscheme desert	" default color scheme
+set ruler			" always show current position
 set autoindent      " automatically set indent of new line
-set smartindent
+set smartindent		" enable smart indent
 set laststatus=2    " show the status line always
+set tabstop=4		" expand to four spaces
+set cmdheihgt=2		" height of the command window
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"set <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
+set <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
 
 " moving up and down work as you would expect
 nnoremap <silent>   j gj
@@ -176,3 +195,5 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 inoremap <BS> <NOP>
 inoremap <Del> <NOP>
+
+set path+=**
