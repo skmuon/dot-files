@@ -25,7 +25,6 @@ alias gpo="git push origin master"
 alias got="git "
 alias get="git "
 
-alias mcf="find . -name "*.c" -o -name "*.cpp" -o -name "*.h" -o  -name  "*.hpp" > cscope.files"
 alias csc="cscope -d"
 alias mcs="cscope -q -R -b -i cscope.files"
 alias mct="ctags -R"
