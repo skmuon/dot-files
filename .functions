@@ -1,0 +1,14 @@
+function mdcat()
+{
+	cat $* | markdown | html2text
+}
+
+function mdmore()
+{
+	mdcat $* | more
+}
+
+function mdless()
+{
+	mdcat $* | less
+}

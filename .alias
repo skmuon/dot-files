@@ -27,3 +27,6 @@ alias get="git "
 alias csc="cscope -d"
 alias mcs="cscope -q -R -b -i cscope.files"
 alias mct="ctags -R"
+
+alias mpdf="pandoc -s -V geometry:margin=1in -H ~/work/scripts/custompreample.tex -o"
+alias mdcat="pandoc -f markdown -t plain"
